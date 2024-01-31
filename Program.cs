@@ -18,4 +18,6 @@ else
 }
 PrintBoard();
 // read line to see what the user wants to do int.parse initializing
+Console.WriteLine("Where do you want to put your mark?");
+choice = int.Parse(Console.ReadLine());
 // if else statement to check the place in the array
