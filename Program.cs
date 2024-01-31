@@ -2,6 +2,7 @@
 // Console.WriteLine("Hello, World!");
 // hey I'm writing this comment -Eliza
 using System.Runtime.CompilerServices;
+using System.Threading;
 using Mission04___Team1_11;
 
 TikTakBoard tk = new TikTakBoard();
@@ -11,6 +12,7 @@ char[] PlayerArray = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 int Player = 1;
 int choice;
 int start = 0;
+string result = "";
 // give the players their symbols 
 Console.WriteLine("PLayer1:X and Player2:O");
 do
@@ -25,7 +27,7 @@ do
         Console.WriteLine("Player 1's turn!");
     }
     // print the Board for the player
-    tk.PrintBoard();
+    tk.printBoard(PlayerArray);
     // read line to see what the user wants to do int.parse initializing
     Console.WriteLine("Where do you want to put your mark?");
     // gather the users choice
@@ -44,13 +46,27 @@ do
             Player++;
         }
     }
-    result = tk.CheckWinner(PlayerArray);
+    result = tk.checkWinner(PlayerArray);
 
-    if (result)
+    if (result != "")
     {
         start = 1;
     }
 
 } while (start == 0);
 // print who the winner is and end the game
-Console.WriteLine($"Player {result[2]} is the winner!");
+if (result == "X")
+{
+    Console.WriteLine("Player 1 is the winner!");
+}
+else if (result == "O")
+{
+    Console.WriteLine("Player 2 is the winner!");
+}
+else
+{
+    Console.WriteLine("It's a tie! Play again to see who can win!");
+}
+
+// Added this because it was closing as soon as the game ended immediately
+Thread.Sleep(5000);

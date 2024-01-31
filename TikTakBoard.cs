@@ -9,6 +9,7 @@ namespace Mission04___Team1_11
 {
     internal class TikTakBoard
     {
+        string result = "";
 
         public void printBoard(char[] PlayerArray) // method that prints the board based on the information passed to it
         {
@@ -38,11 +39,17 @@ namespace Mission04___Team1_11
                 int a = winCombinations[i, 0], b = winCombinations[i, 1], c = winCombinations[i, 2];
                 if (PlayerArray[a] == PlayerArray[b] && PlayerArray[b] == PlayerArray[c])
                 {
-                    return PlayerArray[a].ToString();
+                    Console.WriteLine(PlayerArray[a].ToString());
+                    result = PlayerArray[a].ToString();
                 }
             };
 
-            return ""; // No winner yet
+            if (PlayerArray.Skip(1).All(c => c == 'X' || c == 'O'))
+            {
+                result = "Tie";
+            }
+
+            return result; // No winner yet
         }
     }
 }
