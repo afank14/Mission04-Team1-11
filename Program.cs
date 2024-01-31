@@ -22,3 +22,16 @@ tk.PrintBoard();
 Console.WriteLine("Where do you want to put your mark?");
 choice = int.Parse(Console.ReadLine());
 // if else statement to check the place in the array
+if (PlayerArray[choice] != 'X' && PlayerArray[choice] != 'O') ;
+{
+    if (Player % 2 == 0)
+    {
+        PlayerArray[choice] = 'O';
+    }
+    else
+    {
+        PlayerArray[choice] = 'X';
+    }
+}
+tk.CheckWinner(PlayerArray);
+// check the position in the array make sure they didn't just put O and X
