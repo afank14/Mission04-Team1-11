@@ -40,7 +40,6 @@ namespace Mission04___Team1_11
                 int a = winCombinations[i, 0], b = winCombinations[i, 1], c = winCombinations[i, 2];
                 if (PlayerArray[a] == PlayerArray[b] && PlayerArray[b] == PlayerArray[c])
                 {
-                    Console.WriteLine(PlayerArray[a].ToString());
                     result = PlayerArray[a].ToString();
                 }
             };

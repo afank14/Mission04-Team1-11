@@ -46,7 +46,10 @@ do
             Player++;
         }
     }
+
+    Console.WriteLine("");
     result = tk.checkWinner(PlayerArray);
+
 
     if (result != "")
     {
@@ -55,6 +58,7 @@ do
 
 } while (start == 0);
 // print who the winner is and end the game
+tk.printBoard(PlayerArray);
 if (result == "X")
 {
     Console.WriteLine("Player 1 is the winner!");
