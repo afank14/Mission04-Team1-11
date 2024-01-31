@@ -2,6 +2,7 @@
 // Console.WriteLine("Hello, World!");
 // hey I'm writing this comment -Eliza
 using System.Runtime.CompilerServices;
+using Mission04___Team1_11;
 
 TikTakBoard tk = new TikTakBoard();
 char[] PlayerArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -11,6 +12,10 @@ int start = 0;
 Console.WriteLine("PLayer1:X and Player2:O");
 if (Player % 2 == 0)
 {
+<<<<<<< HEAD
+    // testing
+}
+=======
     Console.WriteLine("Player 2's turn!");
 }
 else
