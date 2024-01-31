@@ -22,7 +22,7 @@ namespace Mission04___Team1_11
 
         public string checkWinner(char[] PlayerArray) // method that receives the game board array as input and returns if there is a winner and who it was
         {
-            int[,] winCombinations = new int[,]
+            int[,] winCombinations = new int[,] // the winning patterns saved in an array (all vertical, horizontal and diagonal possibilities)
             {
                 {1, 2, 3},
                 {4, 5, 6},
@@ -34,6 +34,7 @@ namespace Mission04___Team1_11
                 {3, 5, 7}
             };
 
+            // iterates through the game results and compares user input to winning combo. If user matches a winCombo, they win
             for (int i = 0; i < 8; i++)
             {
                 int a = winCombinations[i, 0], b = winCombinations[i, 1], c = winCombinations[i, 2];
