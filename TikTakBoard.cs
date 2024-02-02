@@ -44,6 +44,7 @@ namespace Mission04___Team1_11
                 }
             };
 
+            // make sure the board is full and there is no winner in order to declare a tie
             if (PlayerArray.Skip(1).All(c => c == 'X' || c == 'O'))
             {
                 result = "Tie";
