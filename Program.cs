@@ -27,7 +27,7 @@ do
     }
     // print the Board for the player
     tk.printBoard(PlayerArray);
-    // read line to see what the user wants to do int.parse initializing
+    // read line to see what the user wants to do 
     Console.WriteLine("Where do you want to put your mark?");
     // Validate user input
     while (true)
