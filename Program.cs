@@ -41,8 +41,6 @@ do
             Console.WriteLine("Invalid input. Please enter a number between 1 and 9, and a position that is not marked.");
         }
     }
-    // gather the users choice
-    //choice = int.Parse(Console.ReadLine());
 
     // if else statement to check if the place in the array is full or not
 
